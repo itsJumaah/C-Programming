@@ -1,0 +1,65 @@
+Array
+To keep lots of similar data.
+
+Example without an array..
+Store rainfall data - one figure for each month.
+float rainjan, rainfeb, ..., rainnov, raindec;
+//you need 12 variables.
+
+-need in all variables.
+-add up all variables.
+
+To solve this problem, we use an array.
+
+
+Array definition..
+An array is a collection of related variables.
+The array has one name and one data type
+Each element of the array has an index number!
+
+Examples of an array
+
+float rain1, rain2, rain3, rain4, rain5, rain6, rain7, rain8, rain9, rain10, rain11, rain12; 
+float rain[12]; //exactly same as above.
+
+we can use individual variables (elements) as follow:
+rain[7]=62.4;
+
+Example;
+#include<stdio.h>
+float total, avg;
+float rain[12];
+int index;
+int main() {
+	total=0.0;
+	for(index=0; index<12; index++) {
+		printf("Enter the rainfall for month %d: ", index+1);
+		scanf("%f", &rain[index]);
+		total=total+rain[index];
+	}
+	avg=total/12.0;
+	printf("Average rainfall is %1.1f\n", avg);
+}
+
+
+
+
+Part of a program to find max and min.
+Values in an array
+	int array[50];
+	int index, max, min;
+	/*read 50 values into the array*/
+	max=array[0];
+	min=array[0];
+	for(index=0; index<50; index++) {	//to make it more efficient make index=1 instead of index=0 bcz we already looked at 0
+		if(array[index]>max) {
+			max=array[index];
+		}
+		if(array[index]<min) {
+			min=array[index];
+		}
+	}
+	printf("Maximum is %d and minimum is %d\n", maximum);
+}
+
+

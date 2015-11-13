@@ -1,0 +1,32 @@
+University timetable		(Data structures)
+_____________________
+
+Lectures> always 1 hour.
+
+Day> (code)'M' - Monday
+		   'T' - Tuesday
+		   'W' - Wednesday
+		   'H' - Thursday
+		   'F' - Friday
+
+Time> 24 hour time (eg. 2pm = 14)
+		integer
+
+struct lectureTime {
+	char day;
+	int hour;
+};
+
+A paper in the university contains:
+	- A number (eg. 159101)
+	- A name (eg. Programming Fundamentals)
+	- A number of lectures (eg. 4)
+	- Actual lecture: M12, T9, W10, H9
+
+struct paperRecord {
+	float num;					//paper number
+	char name[80];				//paper name
+	int numLectures;			//number of lectures
+	lectureTime lecture[6];		//lecture times
+};
+
